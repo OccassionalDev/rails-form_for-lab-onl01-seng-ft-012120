@@ -13,7 +13,8 @@ class SchoolClassesController < ApplicationController
   end 
   
   def edit 
-    
+    @school_class = SchoolClass.find(params[:id])
+  end 
   
   def create
     @school_class = SchoolClass.new(school_class_params(:title, :room_number))
